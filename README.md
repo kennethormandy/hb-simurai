@@ -3,7 +3,7 @@ hb-simurai
 
 A Harp boilerplate of [simurai’s site](http://simurai.com/).
 
-![hb-simurai boilerplate screenshot](preview.png)
+[![hb-simurai boilerplate screenshot](preview.png)](https://www.harp.io/apps/new?boilerplate=kennethormandy/hb-simurai)
 
 ## Get started
 
