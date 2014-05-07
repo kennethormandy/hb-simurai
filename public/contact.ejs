@@ -1,0 +1,17 @@
+<h1>Contact</h1>
+
+<% for(handle in authors) {
+   var author = authors[handle] %>
+  <h2><%= author.name %></h2>
+  <% if(author.twitter) { %><img class="aside-avatar" src="http://avatars.io/twitter/<%= author.twitter %>?size=large" alt="<%= author.name %> avatar"><% } %>
+  <p><%= author.bio %></p>
+  <ul>
+    <% if(author.twitter) { %><li>Tweet on <a href="http://twitter.com/<%= author.twitter %>">Twitter</a></li><% } %>
+    <% if(author.dribbble) { %><li>Comment on <a href="http://dribbble.com/<%= author.dribbble %>">Dribbble</a></li><% } %>
+    <% if(author.codepen) { %><li>Fork on <a href="http://codepen.io/<%= author.codepen %>">CodePen</a></li><% } %>
+    <% if(author.github) { %><li>Fork on <a href="http://github.com/<%= author.github %>">GitHub</a></li><% } %>
+    <% if(author.tlkio) { %><li>Chat on <a href="http://tlk.io/<%= author.tlkio %>">tlk.io</a></li><% } %>
+    <% if(author.rdio) { %><li>Listen on <a href="http://www.rdio.com/people/<%= author.rdio %>">Rdio</a></li><% } %>
+    <% if(author.email) { %><li>Email <a href="mailto:<%= author.email %>"><%= author.email %></a></li><% } %>
+  </ul>
+<% } %>

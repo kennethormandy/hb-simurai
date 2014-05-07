@@ -1,0 +1,25 @@
+<% function excerpt(content) {
+  if(!content || content.indexOf("</p>") == -1) return;
+  else return content.split("<p>")[1].split("</p>")[0];
+} %>
+
+<ul class="index">
+  <% for(var slug in public.blog._data){ %>
+    <% var post = public.blog._data[slug] %>
+    <% if(post.title) { %>
+      <li class="index-item">
+        <a class="index-link" href="blog/<%= slug %>">
+          <h2 class="index-title">
+            <%= post.title %>
+          </h2>
+          <% if(post.author) { %>
+            <a href="http://twitter.com/<%= authors[post.author].twitter %>"><%= authors[post.author].name %></a>
+          <% } %>
+          <time class="time time--inline"> on <%= post.date %></time>
+        </a>
+        <p><%- excerpt(partial("blog/" + slug)) %></p>
+        <a class="index-more" href="">•••</a>
+      </li>
+    <% } %>
+  <% } %>
+</ul>

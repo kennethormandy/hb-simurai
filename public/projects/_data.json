@@ -1,0 +1,20 @@
+{
+  "hb-casper": {
+    "title": "Casper",
+    "date": "2014-01",
+    "url": "http://github.com/kennethormandy/hb-casper",
+    "desc": "The default Ghost theme, as a static blog."
+  },
+  "hb-epub3": {
+    "title": "ePub3",
+    "date": "2013-10",
+    "url": "http://github.com/kennethormandy/hb-epub3",
+    "desc": "A Harp boilerplate for creating EPUB3 ebooks."
+  },
+  "hb-remedy": {
+    "title": "Remedy",
+    "url": "http://github.com/kennethormandy/hb-remedy",
+    "desc": "A Harp boilerplate.",
+    "date": "2013-08"
+  }
+}

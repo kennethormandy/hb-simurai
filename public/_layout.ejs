@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html id="top">
+<% include _includes/head %>
+<% var base = '';
+   for (i=0;i<current.path.length-1;i++){ base += '../' } %>
+<body>
+
+    <%- public.current %>
+    <div class="wrapper">
+        <% include _includes/aside %>
+
+        <% if(current.path[0] == "blog" && current.source !== 'index') { %>
+          <%- partial(current.path[0] + "/_nest") %>
+        <% } else { %>
+          <%- yield %>
+        <% } %>
+
+        <% include _includes/footer %>
+    </div>
+
+    <% include _includes/analytics %>
+
+<% if(service.prism) { %>
+  <script src="<%= base %>js/prism.js"></script>
+<% } %>
+</body>
+</html>

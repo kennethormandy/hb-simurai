@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Prism - Solarized Dark
+   ========================================================================== */
+
+/* Colors from Ethan Shoonover's _Solarized_:
+ * http://ethanschoonover.com/solarized
+ */
+
+$solarized_base03:  #002b36;
+$solarized_base02:  #073642;
+$solarized_base01:  #586e75;
+$solarized_base00:  #657b83;
+$solarized_base0:   #839496;
+$solarized_base1:   #93a1a1;
+$solarized_base2:   #eee8d5;
+$solarized_base3:   #fdf6e3;
+$solarized_yellow:  #b58900;
+$solarized_orange:  #cb4b16;
+$solarized_red:     #dc322f;
+$solarized_magenta: #d33682;
+$solarized_violet:  #6c71c4;
+$solarized_blue:    #268bd2;
+$solarized_cyan:    #2aa198;
+$solarized_green:   #859900;
+
+/* Set up the basic look and feel */
+
+code,
+kbd,
+samp {
+  background-color: $solarized_base03;
+	border-radius: 3px / .875;
+	color: $solarized_base0;
+	font-size: 87.5%;
+	line-height: 1.4;
+	padding: .25em;
+}
+pre {
+	background-color: $solarized_base03;
+	border-radius: 3px;
+	color: $solarized_base0;
+	font-size: 100%;
+	line-height: inherit;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	code,
+	kbd,
+	samp {
+		background: none;
+		border-radius: 0;
+		direction: ltr;
+		display: block;
+		-webkit-hyphens: none;
+		   -moz-hyphens: none;
+		    -ms-hyphens: none;
+		        hyphens: none;
+		padding: 1.143em;
+		-moz-tab-size: 4;
+		  -o-tab-size: 4;
+		     tab-size: 4;
+		text-align: left;
+		white-space: pre-wrap;
+		word-spacing: normal;
+	}
+
+	// Set the selection color:
+	& ::selection {
+		background: $solarized_base02;
+		color: inherit;
+		text-shadow: none;
+	}
+	& ::-moz-selection {
+		background: $solarized_base02;
+		color: inherit;
+		text-shadow: none;
+	}
+}
+
+pre[class*="language-"] {
+	&::before {
+		background-color: $solarized_base02;
+		border-top-left-radius: ( 3px / .875 );
+		border-top-right-radius: ( 3px / .875 );
+		color: $solarized_base00;
+		display: block;
+		font-size: 87.5%;
+		line-height: 1.4;
+		padding: ( .25em / .875 ) ( 1em / .875 );
+		text-align: right;
+	}
+	code {
+		padding-top: ( .5em / .875 );
+	}
+}
+
+/* General
+   ========================================================================== */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: $solarized_base01;
+}
+
+.token.punctuation {
+	color: $solarized_base00;
+	font-weight: 400;
+}
+.namespace {
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+	color: $solarized_blue;
+	font-weight: 700;
+}
+.token.selector,
+.token.attr-name,
+.token.string {
+	color: $solarized_base0;
+	font-weight: 400;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: $solarized_cyan;
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: $solarized_cyan;
+	font-weight: 400;
+}
+.token.regex,
+.token.important {
+	color: $solarized_red;
+}
+.token.important {
+	font-weight: 700;
+}
+.token.entity {
+	color: $solarized_orange;
+}
+
+// CSS and SASS
+.language-css,
+.language-scss {
+	color: $solarized_blue;
+
+	.token.selector {
+		color: $solarized_yellow;
+	}
+	.token.property {
+		color: $solarized_base0;
+		font-weight: 400;
+	}
+	.token.atrule {
+		color: $solarized_violet;
+	}
+	.token.variable {
+		color: $solarized_magenta;
+	}
+}
+
+// JavaScript
+.language-javascript {
+	.token.keyword {
+		color: $solarized_blue;
+	}
+	.token.operator {
+		color: $solarized_green;
+	}
+	.token.string,
+	.token.number {
+		color: $solarized_cyan;
+		font-weight: 400;
+	}
+	.token.boolean {
+		color: $solarized_yellow;
+		font-weight: 400;
+	}
+	.token.class-name {
+		color: $solarized_yellow;
+	}
+}
+
+// PHP
+.language-php {
+	.token.delimiter,
+	.token.punctuation {
+		color: $solarized_red;
+	}
+	.token.constant,
+	.token.boolean {
+		color: $solarized_yellow;
+	}
+	.token.operator {
+		color: $solarized_green;
+	}
+	.token.variable {
+		color: $solarized_blue;
+		display: inline-block;
+
+		&::first-letter {
+			color: $solarized_green;
+		}
+	}
+	.token.keyword {
+		color: $solarized_green;
+	}
+	.token.number {
+		color: $solarized_cyan;
+		font-weight: 400;
+	}
+	.token.string {
+		color: $solarized_cyan;
+		display: inline-block;
+	}
+}

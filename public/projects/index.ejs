@@ -1,0 +1,24 @@
+<h1>My Projects</h1>
+
+<p>Share your portfolio here by editing the <code>projects/_data.json</code> file.</p>
+
+<ul class="index">
+  <% for(var slug in public.projects._data){ %>
+    <li class="index">
+      <% var project = public.projects._data[slug] %>
+      <% if(project.url) { %>
+        <a href="<%= project.url %>">
+      <% } %>
+        <img src="../img/projects/<%= slug %>.png" alt="<% project.title %> showcase" />
+        <p class="meta">
+          <% if(project.date) { %><time class="meta-time time"><%= project.date %></time><% } %>
+          <span class="meta-title"><%= project.title %></span>
+          <% if(project.desc) { %><span class="meta-description"><%= project.desc %></span><% } %>
+          <% if(project.url) { %><span class="index-more">•••</span><% } %>
+        </p>
+      <% if(project.url) { %>
+        </a>
+      <% } %>
+    </li>
+  <% } %>
+</ul>
