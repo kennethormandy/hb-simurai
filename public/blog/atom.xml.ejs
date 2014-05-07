@@ -1,24 +1,21 @@
-<?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>simurai</title>
-  <link href="http://simurai.com">
-  <link type="application/atom+xml" rel="self" href="http://simurai.com/atom.xml"/>
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://simurai.com</id>
-
-  {% for post in site.posts %}
-  <entry>
-    <id>http://simurai.com{{ post.id }}</id>
-    <link type="text/html" rel="alternate" href="http://simurai.com{{ post.url }}"/>
-    <title>{{ post.title }}</title>
-    <published>{{ post.date | date_to_xmlschema }}</published>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <author>
-      <name>{{ post.author }}</name>
-      <uri>{{ post.author_url }}</uri>
-    </author>
-    <content type="html">{{ post.content | xml_escape }}</content>
-  </entry>
-  {% endfor %}
-
-</feed>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><%- name %></title>
+    <link><%- url %></link>
+    <description><%- description %></description>
+    <atom:link href="<%- url %>/blog/atom.xml" rel="self" type="application/rss+xml" />
+    <% for(slug in public.blog._data) {
+       var post = public.blog._data[slug] %>
+       <% if(post.title) { %>
+        <item>
+          <title><%= post.title %></title>
+          <description><![CDATA[<%- partial(slug) %>]]></description>
+          <pubDate><%= new Date(post.date) %></pubDate>
+          <link><%= url %>/blog/<%- post %></link>
+          <guid isPermaLink="true"><%= url %>/blog/<%= post %></guid>
+        </item>
+      <% } %>
+    <% } %>
+  </channel>
+</rss>

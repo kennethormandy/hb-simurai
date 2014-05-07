@@ -2,6 +2,7 @@
   "globals": {
     "name": "Simurai",
     "title": "Simurai",
+    "url": "http://github.com/kennethormandy/hb-simurai",
     "description": "Simurai’s site as a Harp boilerplate.",
     "authors": {
       "simurai": {
