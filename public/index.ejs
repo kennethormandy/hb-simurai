@@ -6,7 +6,7 @@
 <ul class="index">
   <% for(var slug in public.blog._data){ %>
     <% var post = public.blog._data[slug] %>
-    <% if(post.title) { %>
+    <% if(post.title && post.published!==false) { %>
       <li class="index-item">
         <a class="index-link" href="blog/<%= slug %>">
           <h2 class="index-title">

@@ -8,6 +8,11 @@
     "tags": ["harp", "static", "blog"],
     "author": "kennethormandy"
   },
+  "draft-post": {
+    "title": "Draft post",
+    "date": "2013-12-20",
+    "author": "kennethormandy"
+  },
   "example-post": {
     "title": "Example Post",
     "date": "2013-07-03",

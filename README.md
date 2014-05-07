@@ -32,14 +32,15 @@ harp server
 - Syntax highlighting
 - Portfolio section
 - Comments through Disqus
+- Static draft posts
+- Next and previous post links
 
 […and is totally static, thanks to Harp.](http://harpjs.com)
 
 ## Coming soon…
 
 - Configurable font selection via Google Fonts or Typekit
-- Pullquotes and blockquotes through Markdown
-- Next and previous post links
+- Nice pullquotes and blockquotes through Markdown
 
 ## License
 

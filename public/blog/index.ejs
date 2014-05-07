@@ -6,14 +6,16 @@
 <ul class="index">
   <% for(var slug in public.blog._data){ %>
     <% var post = public.blog._data[slug] %>
-    <% if(post.title) { %>
+    <% if(post.title && post.published!==false) { %>
       <li class="index-item">
         <a class="index-link" href="<%= slug %>">
           <h2 class="index-title">
             <%= post.title %>
           </h2>
-          <time class="time time--inline"><%= post.date %></time>
-          <% if(post.author) { %><span class="meta-author">by <a href="http://twitter.com/<%= authors[post.author].twitter %>"><%= authors[post.author].name %></a></span><% } %>
+          <% if(post.author) { %><span class="meta-author">
+            <a href="http://twitter.com/<%= authors[post.author].twitter %>"><%= authors[post.author].name %></a>
+          <% } %>
+          <time class="time time--inline"> on <%= post.date %></time>
         </a>
         <p><%- excerpt(partial(slug)) %></p>
         <a class="index-more" href="">•••</a>
