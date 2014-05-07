@@ -1,3 +1,3 @@
 # Lab
 
-A simple page. Edit this or add a `.md`, `.ejs`, or `.jade` to add another.
+An example page. Add another `.md`, `.ejs`, or `.jade` file to create a new page, or rename this one and update the nav in `_includes/nav.ejs`.
