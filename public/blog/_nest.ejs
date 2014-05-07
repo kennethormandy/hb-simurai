@@ -1,22 +1,30 @@
-<main class="main">
+<% if(typeof published==='undefined' || published!==false) { %>
 
-    <article class="article">
-        <h1><%- title %></h1>
-        <div class="article-meta">
-            <% if(author) { %>
-              <a href="http://twitter.com/<%= authors[author].twitter %>"><%= authors[author].name %></a>
-            <% } %>
-            <time class="time"> on <%- date %></time>
-        </div>
-        <%- yield %>
-    </article>
+  <main class="main">
 
-    <% include ../_includes/comments %>
+      <article class="article">
+          <h1><%- title %></h1>
+          <div class="article-meta">
+              <% if(author) { %>
+                <a href="http://twitter.com/<%= authors[author].twitter %>"><%= authors[author].name %></a>
+              <% } %>
+              <time class="time"> on <%- date %></time>
+          </div>
+          <%- yield %>
+      </article>
 
-</main>
+      <% include ../_includes/comments %>
 
-<nav class="subnav">
+  </main>
 
-  <%- partial("../_includes/article-nav") %>
+  <nav class="subnav">
 
-</nav>
+    <%- partial("../_includes/article-nav") %>
+
+  </nav>
+
+<% } else { %>
+
+  <% include ../404 %>
+
+<% } %>

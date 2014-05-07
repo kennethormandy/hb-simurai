@@ -11,7 +11,8 @@
   "draft-post": {
     "title": "Draft post",
     "date": "2013-12-20",
-    "author": "kennethormandy"
+    "author": "kennethormandy",
+    "published": false
   },
   "example-post": {
     "title": "Example Post",
