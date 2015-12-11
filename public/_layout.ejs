@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html id="top">
 <% include _includes/head %>
-<% var base = '';
-   for (i=0;i<current.path.length-1;i++){ base += '../' } %>
 <body>
 
     <div class="wrapper">
@@ -20,7 +18,7 @@
     <% include _includes/analytics %>
 
 <% if(service.prism) { %>
-  <script src="<%= base %>js/prism.js"></script>
+  <script src="/js/prism.js"></script>
 <% } %>
 </body>
 </html>
