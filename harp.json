@@ -4,6 +4,7 @@
     "title": "Simurai",
     "url": "http://github.com/kennethormandy/hb-simurai",
     "description": "Simurai’s site as a Harp boilerplate.",
+    "feed": "https://hb-simurai.surge.sh/blog/atom.xml"
     "authors": {
       "simurai": {
         "name": "Simurai",
